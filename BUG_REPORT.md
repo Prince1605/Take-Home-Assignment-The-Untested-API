@@ -65,3 +65,18 @@ This API assigns a task to a user by adding an `assignedTo` field to the task.
 
 **Design Decision:**
 Assignment is handled separately from task creation to keep responsibilities clear and flexible.
+
+
+-----------Submission Ques Ans----------
+1->What I'd test next if I had more time
+
+I would test more edge cases like pagination with large data, invalid query parameters, and concurrent updates. I would also test performance when handling a large number of tasks.
+
+2. What surprised me in the codebase
+
+I found the pagination bug interesting because the logic looked correct at first but produced incorrect results. Also, since the data is stored in memory, it required careful handling during testing.
+
+3. Questions before shipping to production
+->Should userId be validated against a real user system before assigning a task?
+->Should the data be stored in a database instead of in-memory storage?
+->How will authentication and authorization be handled?
